@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import TextArea from "./TextArea";
-import type { ITodo } from "./types/todo";
+import { todos, type ITodo } from "./types/todo";
+import TodoItem from "./TodoItem";
 
 const TodoList = () => {
-  const [todoList, setTodoList] = useState<ITodo[]>([]);
+  const [todoList, setTodoList] = useState<ITodo[]>([...todos]);
 
   useEffect(() => {}, []);
 
@@ -12,7 +13,7 @@ const TodoList = () => {
       <h1 className="text-2xl text-center color-gray">Todo List</h1>
       <TextArea onSetTodo={setTodoList} />
       {todoList.map((todo) => (
-        <p key={todo.id}>{todo.text}</p>
+        <TodoItem key={todo.id} {...todo} />
       ))}
     </div>
   );
