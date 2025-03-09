@@ -9,7 +9,6 @@ export default function TodoList() {
     const loadData = async () => {
       setLoading(true);
       const { users } = await fetchUsers();
-      // console.log(data)
       setLoading(false);
       setListUsers(users);
     };

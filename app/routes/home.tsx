@@ -1,9 +1,9 @@
+import TodoList from "~/components/todolist/todolist";
 import type { Route } from "./+types/home";
-import TodoList from "~/components/todo";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
+    { title: "ToDo List" },
     { name: "description", content: "Welcome to React Router!" },
   ];
 }
