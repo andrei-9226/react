@@ -1,3 +1,4 @@
+"use client"
 import { useEffect, useState } from "react";
 import TextArea from "./TextArea";
 import { todos, type ITodo } from "./types/todo";

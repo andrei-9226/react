@@ -14,24 +14,28 @@ export const todos: ITodo[] = [
     id: "12",
     text: "first todo",
     status: false,
-    time: new Date(),
+    //@ts-ignore
+    time: 'Mon Mar 10 2025 20:59:55 GMT+0300 (Москва, стандартное время)' as Date,
   },
   {
     id: "34",
     text: "second todo",
     status: false,
-    time: new Date(),
+    //@ts-ignore
+    time: 'Mon Mar 10 2025 20:59:55 GMT+0300 (Москва, стандартное время)' as Date,
   },
   {
     id: "52",
     text: "third todo",
     status: false,
-    time: new Date(),
+    //@ts-ignore
+    time: 'Mon Mar 10 2025 20:59:55 GMT+0300 (Москва, стандартное время)' as Date,
   },
   {
     id: "56",
     text: "fourth todo",
     status: false,
-    time: new Date(),
+    //@ts-ignore
+    time: 'Mon Mar 10 2025 20:59:55 GMT+0300 (Москва, стандартное время)' as Date,
   },
 ];
