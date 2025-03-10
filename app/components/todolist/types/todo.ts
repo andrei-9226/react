@@ -8,30 +8,3 @@ export interface ITodo {
 }
 
 export type TSetTodo = Dispatch<SetStateAction<ITodo[]>>;
-
-export const todos: ITodo[] = [
-  {
-    id: "12",
-    text: "first todo",
-    status: false,
-    time: new Date(),
-  },
-  {
-    id: "34",
-    text: "second todo",
-    status: false,
-    time: new Date(),
-  },
-  {
-    id: "52",
-    text: "third todo",
-    status: false,
-    time: new Date(),
-  },
-  {
-    id: "56",
-    text: "fourth todo",
-    status: false,
-    time: new Date(),
-  },
-];

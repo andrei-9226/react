@@ -1,12 +1,17 @@
+"use client";
 import { useEffect, useState } from "react";
 import TextArea from "./TextArea";
-import { todos, type ITodo } from "./types/todo";
+import { type ITodo } from "./types/todo";
 import TodoItem from "./TodoItem";
+import { todoStorage } from "~/utils/Storage";
 
 const TodoList = () => {
-  const [todoList, setTodoList] = useState<ITodo[]>([...todos]);
+  const [todoList, setTodoList] = useState<ITodo[]>([]);
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    const todos = todoStorage.getData();
+    setTodoList(todos);
+  }, []);
 
   return (
     <div className="container mx-auto py-2">
