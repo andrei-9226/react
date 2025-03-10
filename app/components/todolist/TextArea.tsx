@@ -1,6 +1,7 @@
 import { type FC, type FormEvent, useState } from "react";
 import type { ITodo, TSetTodo } from "./types/todo";
 import { createId } from "./utils/todo";
+import { todoStorage } from "~/utils/Storage";
 
 const TextArea: FC<{ onSetTodo: TSetTodo }> = ({ onSetTodo }) => {
   const [text, setText] = useState<string>("");
@@ -14,7 +15,10 @@ const TextArea: FC<{ onSetTodo: TSetTodo }> = ({ onSetTodo }) => {
       time: new Date(),
     };
     onSetTodo((prevTodo) => [...prevTodo, currentTodo]);
-    setText('')
+    // --------------------------
+    todoStorage.setData(currentTodo);
+    // --------------------------
+    setText("");
   };
 
   return (

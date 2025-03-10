@@ -9,10 +9,6 @@ import {
 
 import type { Route } from "./+types/root";
 import "./app.css";
-import Storage from "./utils/Storage"
-
-const storage = new Storage()
-storage.initStorage()
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
